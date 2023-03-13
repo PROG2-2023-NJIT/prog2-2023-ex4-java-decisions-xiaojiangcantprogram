@@ -3,12 +3,11 @@ import java.time.LocalDate;
 
 public class FlightBooking {
 private String flightCompany = "Flights-of-Fancy";
-private String flightID = "Java263415";
+private String flightID = "rdytvf68tr6";
 private String passengerFullName;
 private double departingTicketPrice;
 private double returnTicketPrice;
-private double totalTicketPrice;
-private String ticketNumber;
+private double totalTicketPrice; private String ticketNumber;
 private LocalDate departureDate;
 private LocalDate returnDate;
 private int childPassengers;
@@ -135,7 +134,7 @@ public static String usingMath(int length) {
             Bookingclass = BookingClass.ECONOMY;
             break;
             default :
-            System.out.println("No class chosen.");
+            System.out.println("Error input.");
         }
     }
     public BookingClass getBookingclass() {
@@ -152,7 +151,7 @@ public static String usingMath(int length) {
             Triptype = TripType.RETURN;
             break;
             default :
-            System.out.println("No triptype chosen.");
+            System.out.println("Error input.");
         }
     }
     public TripType getTriptype() {
@@ -160,7 +159,7 @@ public static String usingMath(int length) {
     }
 
 
-    public void setTripSource(String num) {
+    public void setTripSource(String num) {   //Only one parameter
         switch(num) {
             case "1":
             Tripsource = TripSource.NANJING;
@@ -181,7 +180,7 @@ public static String usingMath(int length) {
             Tripsource = TripSource.PARIS;
             break;
             default :
-            System.out.println("No tripsource chosen.");
+            System.out.println("Error input.");
         }
     }
     public TripSource getTripSource() {
@@ -229,7 +228,7 @@ public static String usingMath(int length) {
             Tripdestination = TripDestination. PARIS;
             break;
             default :
-            System.out.println("No tripdestination choesn.");
+            System.out.println("Error input.");
             }
         } else {
             System.out.println("The trip source and the trip destination should not be the same!");
