@@ -26,13 +26,13 @@ public class Main
         FlightBooking.BookingClass BookingClass = fb.getBookingclass();
         
        
-        System.out.println("Please enter the number of triptype:1.One way  2.Return ");
+        System.out.println("Please pick the choice(number) of 1.One way /n 2.Return ");
         String num2 = myscanner.nextLine();
         fb.setTripType(num2);
         FlightBooking.TripType triptype = fb.getTriptype();
 
 
-         System.out.println("Please enter the number of tripsouce you would like to travel" );
+         System.out.println("Please pick the number of tripsouce you would like to travel" );
          System.out.println("1." + "Nanjing");
          System.out.println("2." + "Beijing");
          System.out.println("3." + "Oulu");
@@ -44,6 +44,7 @@ public class Main
         FlightBooking.TripSource result = fb.getTripSource();
 
         fb.setSourceAirport(result);
+        //FlightBooking.SourceAirport go = fb.getSourceairport();
 
         
          System.out.println("Please pick the number of tripdestination you would like to go" );
@@ -58,13 +59,14 @@ public class Main
         FlightBooking.TripDestination result2 = fb.getTripDestination();
 
         fb.setDestinationAirport(result2);
+        //FlightBooking.SourceAirport back = fb.getSourceairport();
         
-        System.out.println("Please enter your date of departure:");
+        System.out.println("Please input your date of departure:");
         String sta = myscanner.nextLine();
         LocalDate departure = LocalDate.parse(sta);
         fb.setDepartureDate(departure);
         LocalDate departureDate = fb.getDepartingDate();
-        System.out.println("Please inter your date of returning:");
+        System.out.println("Please input your date of returning:");
         String sta2 = myscanner.nextLine();
         LocalDate returningDate = LocalDate.parse(sta2);
         fb.setReturnDate(returningDate);
@@ -72,11 +74,11 @@ public class Main
 
         String ticketNumber = fb.getTicketNumber();
         
-        System.out.println("Dear passenger please enter Your FullName:");
+        System.out.println("Dear passenger please input Your FullName:");
         String passengerFullName = myscanner.nextLine();
-        System.out.println("Dear passenger please enter the number of childpassengers:");
+        System.out.println("Dear passenger please input the number of childpassengers:");
         int childpassengers = myscanner.nextInt();
-        System.out.println("Dear passenger please enter the number of adultpassengers:");
+        System.out.println("Dear passenger please input the number of adultpassengers:");
         int adultpassengers = myscanner.nextInt();
         myscanner.close();
         String company = fb.getFlightCompany();
